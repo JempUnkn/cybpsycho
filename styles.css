@@ -1,0 +1,464 @@
+/* Estilo geral */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fonte mais moderna */
+  background-color: #181818; /* Preto um pouco mais claro */
+  color: #eee; /* Cinza claro */
+  text-align: center;
+  line-height: 1.6; /* Melhor legibilidade */
+}
+
+.search-container {
+  margin-top: 80px; /* Espaçamento superior menor */
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 800px; /* Largura máxima */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.search-header h1 {
+  font-size: 2.5em; /* Diminuir o tamanho do título */
+  color: #98FB98; /* Verde mais suave */
+  text-shadow: 0 0 10px rgba(152, 251, 152, 0.8); /* Sombra mais suave */
+  margin-bottom: 10px; /* Espaçamento inferior para o título */
+}
+
+.search-header p {
+  color: #aaa; /* Cinza mais claro */
+  font-size: 1.1em; /* Reduzir o tamanho do texto descritivo */
+  margin-bottom: 20px;
+}
+
+input {
+  width: 70%; /* Aumentar a largura */
+  max-width: 500px; /* Largura máxima para o input */
+  padding: 12px; /* Reduzir o preenchimento */
+  font-size: 16px; /* Reduzir o tamanho da fonte */
+  margin-top: 15px; /* Reduzir a margem */
+  border: 1px solid #555; /* Borda mais sutil */
+  border-radius: 25px; /* Bordas arredondadas */
+  background-color: #222; /* Fundo mais escuro */
+  color: #ddd; /* Cor do texto mais clara */
+  outline: none;
+  box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.3); /* Sombra interna */
+  transition: border-color 0.3s ease; /* Transição suave */
+}
+
+input:focus {
+  border-color: #98FB98; /* Borda verde ao focar */
+}
+
+button {
+  padding: 12px 25px; /* Reduzir preenchimento vertical, aumentar horizontal */
+  background-color: #98FB98; /* Verde mais suave */
+  color: #111; /* Cor do texto mais escura */
+  font-size: 16px; /* Reduzir o tamanho da fonte */
+  border: none;
+  border-radius: 25px; /* Bordas arredondadas */
+  cursor: pointer;
+  margin-top: 15px; /* Reduzir a margem */
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3); /* Sombra mais sutil */
+  transition: background-color 0.3s ease, transform 0.1s ease; /* Transições suaves */
+}
+
+button:hover {
+  background-color: #80c680; /* Verde ligeiramente mais escuro */
+  transform: translateY(-2px); /* Leve elevação ao passar o mouse */
+}
+
+button:active {
+  transform: translateY(0); /* Remove elevação ao clicar */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Sombra reduzida ao clicar */
+}
+
+.results-container {
+  margin-top: 30px; /* Reduzir a margem superior */
+  max-width: 800px; /* Largura máxima para os resultados */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.result-item {
+  background-color: #222; /* Cor de fundo mais escura */
+  padding: 15px; /* Reduzir o preenchimento */
+  margin: 10px 0;
+  border-radius: 8px; /* Bordas um pouco menos arredondadas */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3); /* Sombra mais suave */
+  transition: transform 0.2s ease; /* Transição suave ao passar o mouse */
+}
+
+.result-item:hover {
+  transform: translateY(-3px); /* Elevação suave ao passar o mouse */
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3); /* Sombra aumentada ao passar o mouse */
+}
+
+.result-item a {
+  text-decoration: none;
+  color: #98FB98; /* Verde mais suave */
+  font-size: 1.1em; /* Reduzir o tamanho da fonte */
+  transition: color 0.3s ease; /* Transição suave na cor */
+}
+
+.result-item a:hover {
+  color: #fff; /* Cor branca ao passar o mouse */
+}
+
+.result-item p {
+  color: #bbb; /* Cor do texto mais clara */
+  font-size: 0.9em; /* Reduzir o tamanho da fonte */
+}
+
+
+/* Estilos para a seção de imagens */
+
+.image-source {
+  font-size: 0.8em;
+  color: #777;
+  text-align: center;
+}
+
+.image-section {
+  margin-top: 30px;
+  text-align: left;
+}
+
+.image-section h2 {
+  font-size: 1.4em;
+  color: #98FB98;
+  margin-bottom: 15px;
+}
+
+.image-section .image-item {
+  display: inline-block;  /* Exibe as imagens lado a lado */
+  margin: 5px;
+  width: 150px;       /* Define a largura de cada imagem */
+  height: 150px;      /* Define a altura de cada imagem */
+  overflow: hidden;   /* Garante que a imagem não ultrapasse as dimensões */
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s ease;
+}
+
+.image-section .image-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+.image-section img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;  /* Preenche o contêiner mantendo a proporção */
+}
+
+/* Estilos para o Knowledge Graph */
+.knowledge-graph-section {
+  margin-top: 30px;
+  text-align: left;
+  background-color: #222;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  color: #bbb;
+}
+
+.knowledge-graph-section h2 {
+  font-size: 1.5em;
+  color: #98FB98;
+  margin-bottom: 10px;
+}
+
+.knowledge-graph-section a {
+  color: #98FB98;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.knowledge-graph-section a:hover {
+  color: #fff;
+}
+
+
+/* Estilos para vídeos e perguntas relacionadas */
+.video-section, .faq-section {
+    margin-top: 30px;
+}
+
+.video-section h2, .faq-section h2 {
+    font-size: 1.5em;
+    color: #98FB98;
+    margin-bottom: 20px;
+}
+
+.video-item {
+    display: flex;
+    flex-direction: column;
+    background-color: #222;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s ease;
+}
+
+.video-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+.video-item a {
+    text-decoration: none;
+    color: #98FB98;
+    font-size: 1.1em;
+    transition: color 0.3s ease;
+}
+
+.video-item a:hover {
+    color: #fff;
+}
+
+.video-item img {
+    width: 100%;
+    max-height: 150px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.video-item p {
+    color: #bbb;
+    font-size: 0.9em;
+}
+
+
+
+/* TABS */
+/* Estilos para o menu de abas */
+.tab-menu {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  border-bottom: 1px solid #444; /* Adiciona uma linha abaixo das abas */
+}
+
+.tab-button {
+  background-color: transparent;
+  color: #aaa;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.tab-button:hover {
+  color: #fff;
+}
+
+.tab-button.active {
+  color: #98FB98;
+  border-bottom: 2px solid #98FB98; /* Adiciona uma linha indicando a aba ativa */
+}
+
+/* Esconde as seções por padrão */
+.organic-section, .video-section, .faq-section {
+  display: none;
+}
+
+/* Mostra a seção "Tudo" por padrão */
+.organic-section.active, .video-section.active, .faq-section.active {
+  display: block;
+}
+
+
+
+/* //////////////////////////////////// */
+/* Estilos para Perguntas Frequentes */
+.faq-section {
+  margin-top: 30px;
+}
+
+.faq-section h2 {
+  font-size: 1.4em;
+  color: #98FB98;
+  margin-bottom: 15px;
+  text-align: left; /* Alinha o título à esquerda */
+}
+
+.question-item {
+  background-color: #222;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease; /* Transição para todas as propriedades */
+  position: relative;
+  overflow: hidden; /* Garante que o conteúdo oculto não vaze */
+}
+
+.question-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Estilo do botão de expandir/recolher */
+.question-toggle {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: #444;
+  color: #eee;
+  border: none;
+  cursor: pointer;
+  font-size: 1em;
+  line-height: 25px;
+  text-align: center;
+  transition: background-color 0.3s ease;
+  z-index: 1; /* Garante que o botão fique acima do conteúdo */
+}
+
+.question-toggle:hover {
+  background-color: #666;
+}
+
+/* Estilo do conteúdo da pergunta */
+.question-content {
+  padding-left: 40px; /* Espaço para o botão */
+  text-align: left;
+  max-height: 0; /* Inicialmente escondido */
+  overflow: hidden;
+  transition: max-height 0.4s cubic-bezier(0, 1, 0, 1), padding 0.4s ease; /* Transição suave */
+}
+
+.question-item.expanded .question-content {
+  max-height: 500px; /* Altura máxima quando expandido (ajuste conforme necessário) */
+  padding: 15px 40px 15px 40px; /* Adiciona padding quando expandido */
+}
+
+.question-item h4 {
+  color: #98FB98;
+  font-size: 1.1em;
+  margin-bottom: 10px;
+}
+
+.question-item p {
+  color: #bbb;
+  font-size: 0.9em;
+  margin-bottom: 10px;
+}
+
+.question-item a {
+  color: #98FB98;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.question-item a:hover {
+  color: #fff;
+}
+
+/* Estilos para a seção orgânica */
+.organic-section {
+    margin-top: 30px;
+}
+
+.organic-section h2 {
+    font-size: 1.4em;
+    color: #98FB98;
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.result-item {
+    background-color: #222;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s ease;
+    text-align: left; /* Alinha o texto à esquerda */
+}
+
+.result-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+.result-item h3 {
+    font-size: 1.1em;
+    margin-bottom: 5px;
+}
+
+.result-item a {
+    color: #98FB98;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.result-item a:hover {
+    color: #fff;
+}
+
+.result-item p {
+    color: #bbb;
+    font-size: 0.9em;
+    margin-top: 5px;
+}
+
+/* Estilo para a URL abaixo do título */
+.result-url {
+    display: block;
+    color: #777;
+    font-size: 0.8em;
+    margin-bottom: 5px;
+    text-decoration: none;
+}
+
+.result-url:hover {
+    color: #ccc;
+}
+
+/* Estilos para o controle de Age Protection */
+.age-protection-control {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+.age-protection-control label {
+  color: #aaa;
+  margin-right: 2px;
+  font-size: 0.67em;
+}
+
+#ageProtectionToggle {
+  padding: 5px 7px;
+  margin-bottom: 15px;
+  background-color: #777;
+  color: #eee;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.5em;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#ageProtectionToggle[data-state="active"] {
+  background-color: #98FB98;
+  color: #222;
+}
+
+#ageProtectionToggle:hover {
+  background-color: #888;
+  color: #ddd;
+}
+
+#ageProtectionToggle[data-state="active"]:hover {
+  background-color: #80c680;
+  color: #111;
+}

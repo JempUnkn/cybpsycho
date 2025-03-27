@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>cybpsycho - Busca no Cyberpunk</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Tela de Busca -->
+  
+  <div class="search-container">
+    <div class="search-header">
+      <h1>cybpsycho</h1>
+      <p>Encontre o que você procura no futuro</p>
+    </div>
+
+    <!-- Barra de Busca -->
+    <input type="text" id="searchBox" placeholder="Pesquise algo...">
+    <button id="searchBtn">🔍</button>
+
+    <!-- Menu de Abas -->
+    <div class="tab-menu">
+        <button class="tab-button active" data-tab="all">Tudo</button>
+        <button class="tab-button" data-tab="images">Imagens</button>
+        <button class="tab-button" data-tab="videos">Vídeos</button>
+
+
+        
+        <!-- Controle de Age Protection -->
+        <div style="display: none;">SPACE</div>
+        <div class="age-protection-control">
+          <label for="ageProtectionToggle">Age Protection:</label>
+          <button id="ageProtectionToggle" data-state="active">Ligado</button>
+        </div>
+        <!-- Adicione mais abas conforme necessário -->
+    </div>
+
+    
+  </div>
+
+  
+  <!-- Resultados da Pesquisa -->
+  <div id="results" class="results-container">
+    <!-- Aqui os resultados serão carregados dinamicamente -->
+  </div>
+
+  <script src="searchEngine.js"></script>
+</body>
+</html>
