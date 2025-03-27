@@ -4,17 +4,17 @@
 
   <img src="https://i.ibb.co/JqCcwCm/Turbo-Granny-29-Infobox-29.png" width="144"/>
 
-  <h1 align="center">Meu Motor de Busca Cyberpunk</h1>
+  <h1 align="center">CYBPSYCHO - Search Engine</h1>
 
   <p align="center">
-    <strong>Um motor de busca com tema Moderno, personalização de abas e proteção de idade.</strong>
+    <strong>Um Search Engine com tema Moderno, personalização de abas e proteção de idade.</strong>
   </p>
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 <br>
 </div>
 
-### **Meu Motor de Busca Cyberpunk - Encontre o Futuro da Informação**
+### **CYBPSYCHO - Seja um Trinha Rede**
 
 Este é um projeto de motor de busca com um tema Moderno, que oferece funcionalidades como abas para diferentes tipos de conteúdo (tudo, imagens, vídeos), proteção de idade e personalização visual.
 
