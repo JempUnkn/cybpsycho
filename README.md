@@ -27,7 +27,7 @@ Principais recursos:
 
 ## **Sumário**
 
-1.  [**Introdução**](#cybpsicho---seja-um-trinha-rede)
+1.  [**Introdução**](#cybpsycho---seja-um-trinha-rede)
 2.  [**Tecnologias Utilizadas**](#tecnologias-utilizadas)
 3.  [**Configuração e Uso**](#configuração-e-uso)
 4.  [**Personalização**](#personalização)
