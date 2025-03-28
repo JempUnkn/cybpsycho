@@ -114,8 +114,9 @@ async function search(query, tab = 'all') {
         engine = 'google_images'; // Usar Google Images
     }
 
+    const encodedQuery = encodeURIComponent(query);
     const params = new URLSearchParams({
-        q: query,
+        q: encodedQuery,
         location: location,
         hl: language,
         gl: "br",
