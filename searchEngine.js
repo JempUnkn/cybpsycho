@@ -312,3 +312,19 @@ searchBox.addEventListener("keypress", function (event) {
         searchBtn.click();
     }
 });
+
+
+// Função para fechar o popup após 6 segundos
+window.onload = function() {
+    const popupnotification = document.querySelector('.popupnotification');
+    const countdownBar = document.querySelector('.countdown-bar div');
+    
+    // Countdown para 6 segundos
+    setTimeout(() => {
+        popupnotification.style.display = 'none'; // Esconde o popup após 6 segundos
+    }, 6000);
+
+    // Anima a barra de countdown (de 100% para 0%)
+    countdownBar.style.transition = 'width 6s linear';
+    countdownBar.style.width = '0%';
+};
