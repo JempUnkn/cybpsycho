@@ -155,7 +155,9 @@ async function search(query, tab = 'all') {
         displayResults(data, tab); // Exibe os resultados na aba selecionada
     } catch (error) {
         console.error("Erro ao buscar resultados:", error);
-        resultsContainer.innerHTML = `<p>⚠️ Ocorreu um erro ao buscar os resultados.</p>`;
+        resultsContainer.innerHTML = `<p>⚠️ Ocorreu um erro ao buscar os resultados.</p>
+        <p><a style="color:red;"> ${error}</a></p>
+        `;
     }
 }
 
