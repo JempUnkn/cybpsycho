@@ -13,13 +13,25 @@ function getUserLanguage() {
   return navigator.language || navigator.userLanguage || "pt-BR";
 }
 
-// Função para obter a cidade e país pelo IP
+// Função para obter a cidade e país pelo IP (sem proxy)
 async function getUserLocation() {
   try {
-    const response = await fetch(proxy + ipLocationApiUrl); // Adicionado o proxy aqui
+    const response = await fetch(ipLocationApiUrl, { // Removido o proxy daqui
+      headers: {
+        'Accept': 'application/json'
+      }
+    });
+
+    if (!response.ok) {
+      console.error("Erro na API de geolocalização:", response.status);
+      return "Brazil"; // Retorna o padrão em caso de erro na API
+    }
+
     const data = await response.json();
     if (data.city && data.country_name) {
       return `${data.city}, ${data.country_name}`;
+    } else {
+      console.warn("Dados de localização incompletos:", data);
     }
   } catch (error) {
     console.error("Erro ao obter localização pelo IP:", error);
@@ -45,6 +57,7 @@ document.querySelectorAll('.tab-button').forEach(button => {
 
 
 
+// Isso pra o Proteção de Idade
 // Função para definir um cookie
 function setCookie(name, value, days) {
   let expires = "";
